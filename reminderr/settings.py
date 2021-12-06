@@ -25,13 +25,7 @@ SECRET_KEY = 'django-insecure-$!p^ax47r+(z$ic9_g73y*&atb+*&1fsjs#4-d_661g&bz8pnp
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-
-_path = "/home/sajad2024/reminder"
-if _path not in sys.path:
-    sys.path.insert(0, _path)
-
-os.environ["DJANGO_SETTINGS_MODULE"] = "reminderr.settings"
+ALLOWED_HOSTS = ['sajad2024.pythonanywhere.com']
 
 # Application definition
 
@@ -133,3 +127,9 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CORS_ALLOWED_ORIGINS = [
     "http://127.0.0.1:8000",
 ]
+# default static files settings for PythonAnywhere.
+# see https://help.pythonanywhere.com/pages/DjangoStaticFiles for more info
+MEDIA_ROOT = '/home/sajad2024/reminder/media'
+MEDIA_URL = '/media/'
+STATIC_ROOT = '/home/sajad2024/reminder/static'
+STATIC_URL = '/static/'
